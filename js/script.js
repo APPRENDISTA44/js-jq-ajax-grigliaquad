@@ -1,10 +1,9 @@
 $(document).ready(function () {
-
+  var source = $('#quadrato-template').html();
+  var template = Handlebars.compile(source);
+  var html = template();
   var numeroQuadrati = 36
   for (var i = 0; i < numeroQuadrati ; i++) {
-    var source = $('#quadrato-template').html();
-    var template = Handlebars.compile(source);
-    var html = template();
     $('.container').append(html);
   }
 
